@@ -1,6 +1,5 @@
 task: noor
 dataset_path: mdahba/noor_vf
-dataset_name: noor_vf  # specify if using a subset
 output_type: multiple_choice  # or: generate_until, loglikelihood, loglikelihood_rolling
 # training_split: train
 validation_split: validation
