@@ -1,0 +1,18 @@
+task: noor
+dataset_path: mdahba/noor_vf
+dataset_name: noor_vf  # specify if using a subset
+output_type: multiple_choice  # or: generate_until, loglikelihood, loglikelihood_rolling
+# training_split: train
+validation_split: validation
+test_split: test
+num_fewshot: 5
+doc_to_text: "Q: {{question}}\nOptions: {{', '.join(choices)}}\nA:"
+doc_to_target: "{{answer}}"  # for multiple_choice, can be index or string
+doc_to_choice: ["{{choices[0]}}", "{{choices[1]}}", "{{choices[2]}}", "{{choices[3]}}"]
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
