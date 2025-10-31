@@ -78,7 +78,7 @@ SUBJECTS = {
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--base_yaml_path", required=True)
-    parser.add_argument("--save_prefix_path", default="mmlu")
+    parser.add_argument("--save_prefix_path", default="noor")
     parser.add_argument("--cot_prompt_path", default=None)
     parser.add_argument("--task_prefix", default="")
     parser.add_argument("--group_prefix", default="")
@@ -111,12 +111,12 @@ if __name__ == "__main__":
 
         yaml_dict = {
             "include": base_yaml_name,
-            "tag": f"mmlu_{args.task_prefix}_{category}"
+            "tag": f"noor_{args.task_prefix}_{category}"
             if args.task_prefix != ""
-            else f"mmlu_{category}",
-            "task": f"mmlu_{args.task_prefix}_{subject}"
+            else f"noor_{category}",
+            "task": f"noor_{args.task_prefix}_{subject}"
             if args.task_prefix != ""
-            else f"mmlu_{subject}",
+            else f"noor_{subject}",
             "task_alias": subject.replace("_", " "),
             "dataset_name": subject,
             "description": description,
@@ -133,11 +133,11 @@ if __name__ == "__main__":
             )
 
     if args.task_prefix != "":
-        mmlu_subcategories = [
-            f"mmlu_{args.task_prefix}_{category}" for category in ALL_CATEGORIES
+        noor_subcategories = [
+            f"noor_{args.task_prefix}_{category}" for category in ALL_CATEGORIES
         ]
     else:
-        mmlu_subcategories = [f"mmlu_{category}" for category in ALL_CATEGORIES]
+        noor_subcategories = [f"noor_{category}" for category in ALL_CATEGORIES]
 
     if args.group_prefix != "":
         file_save_path = args.group_prefix + ".yaml"
@@ -148,10 +148,10 @@ if __name__ == "__main__":
     with open(file_save_path, "w", encoding="utf-8") as yaml_file:
         yaml.dump(
             {
-                "group": f"mmlu_{args.task_prefix}"
+                "group": f"noor_{args.task_prefix}"
                 if args.task_prefix != ""
-                else "mmlu",
-                "task": mmlu_subcategories,
+                else "noor",
+                "task": noor_subcategories,
             },
             yaml_file,
             indent=4,

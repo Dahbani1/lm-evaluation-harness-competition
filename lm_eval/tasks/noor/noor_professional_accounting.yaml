@@ -1,7 +1,7 @@
 "dataset_name": "professional_accounting"
 "description": "The following are multiple choice questions (with answers) about professional\
   \ accounting.\n\n"
-"include": "_noor_template_yaml"
+"include": "_noor_template.yaml"
 "tag": "noor_other"
 "task": "noor_professional_accounting"
 "task_alias": "professional accounting"

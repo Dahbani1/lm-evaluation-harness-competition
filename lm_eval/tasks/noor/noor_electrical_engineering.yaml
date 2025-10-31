@@ -1,7 +1,7 @@
 "dataset_name": "electrical_engineering"
 "description": "The following are multiple choice questions (with answers) about electrical\
   \ engineering.\n\n"
-"include": "_noor_template_yaml"
+"include": "_noor_template.yaml"
 "tag": "noor_stem"
 "task": "noor_electrical_engineering"
 "task_alias": "electrical engineering"
