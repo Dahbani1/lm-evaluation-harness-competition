@@ -2,6 +2,6 @@
 "description": "The following are multiple choice questions (with answers) about business\
   \ ethics.\n\n"
 "include": "_noor_template.yaml"
-"tag": "noor_other"
+"tag": "noor_other_tasks"
 "task": "noor_business_ethics"
 "task_alias": "business ethics"
