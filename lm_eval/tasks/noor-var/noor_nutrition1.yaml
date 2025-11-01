@@ -1,0 +1,7 @@
+"dataset_name": "nutrition"
+"description": "The following are multiple choice questions (with answers) about nutrition.\n\
+  \n"
+"include": "_noor_template1.yaml"
+"tag": "noor_other_tasks"
+"task": "noor_nutrition"
+"task_alias": "nutrition"

@@ -1,0 +1,7 @@
+"dataset_name": "virology"
+"description": "The following are multiple choice questions (with answers) about virology.\n\
+  \n"
+"include": "_noor_template1.yaml"
+"tag": "noor_other_tasks"
+"task": "noor_virology"
+"task_alias": "virology"

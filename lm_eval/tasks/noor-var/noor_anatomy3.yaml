@@ -1,0 +1,8 @@
+"dataset_name": "anatomy"
+"description": "The following are multiple choice questions (with answers) about anatomy.\n\
+  \n"
+"include": "_noor_template3.yaml"
+"tag": "noor_stem_tasks"
+"task": "noor_anatomy"
+"task_alias": "anatomy"
+
