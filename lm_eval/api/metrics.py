@@ -576,3 +576,19 @@ def aggregate_subtask_metrics(metrics, sizes, weight_by_size=True):
     assert len(metrics) == len(sizes)
 
     return sum([metric * size for metric, size in zip(metrics, sizes)]) / sum(sizes)
+
+@register_metric(
+    metric="confidence_margin",
+    higher_is_better=True,
+    aggregation="mean"
+)
+def confidence_margin():
+    pass
+
+@register_metric(
+    metric="average_confidence_margin",
+    higher_is_better=True,
+    aggregation="mean"
+)
+def average_confidence_margin():
+    pass
