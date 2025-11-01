@@ -3,5 +3,5 @@
   \ facts.\n\n"
 "include": "_noor_template1.yaml"
 "tag": "noor_other_tasks"
-"task": "noor_global_facts"
+"task": "noor_global_facts1"
 "task_alias": "global facts"

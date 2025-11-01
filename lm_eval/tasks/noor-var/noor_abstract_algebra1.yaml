@@ -3,5 +3,5 @@
   \ algebra.\n\n"
 "include": "_noor_template1.yaml"
 "tag": "noor_stem_tasks"
-"task": "noor_abstract_algebra"
+"task": "noor_abstract_algebra1"
 "task_alias": "abstract algebra"
