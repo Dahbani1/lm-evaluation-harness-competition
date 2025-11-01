@@ -2,6 +2,7 @@ import logging
 import warnings
 from functools import partial
 from typing import TYPE_CHECKING, Iterable, Optional, Union
+from lm_eval.api.registry import register_sampler
 
 import datasets
 
@@ -230,3 +231,16 @@ def get_sampler(name: str):
         raise ValueError(
             f"Attempted to use contextsampler '{name}', but no sampling strategy for this name found! Supported model names: {', '.join(SAMPLER_REGISTRY.keys())}"
         )
+
+
+@register_sampler("random_n_0_5")
+class RandomN0to5Sampler(ContextSampler):
+    """Randomly select between 0 and 5 few-shot examples for each instance."""
+    def sample(self, docs, num_fewshot, rng=None):
+        import random
+        if rng is None:
+            rng = random
+        # Randomly choose how many examples (0 to num_fewshot inclusive)
+        n = rng.randint(0, min(5, num_fewshot))
+        # Select n examples from the front (you can random.sample if you prefer)
+        return docs[:n]
