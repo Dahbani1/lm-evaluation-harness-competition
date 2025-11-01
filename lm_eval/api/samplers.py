@@ -2,7 +2,7 @@ import logging
 import warnings
 from functools import partial
 from typing import TYPE_CHECKING, Iterable, Optional, Union
-from lm_eval.api.registry import register_sampler
+
 
 import datasets
 
@@ -233,14 +233,24 @@ def get_sampler(name: str):
         )
 
 
-@register_sampler("random_n_0_5")
-class RandomN0to5Sampler(ContextSampler):
-    """Randomly select between 0 and 5 few-shot examples for each instance."""
-    def sample(self, docs, num_fewshot, rng=None):
-        import random
-        if rng is None:
-            rng = random
-        # Randomly choose how many examples (0 to num_fewshot inclusive)
-        n = rng.randint(0, min(5, num_fewshot))
-        # Select n examples from the front (you can random.sample if you prefer)
-        return docs[:n]
+# --- Helper function ---
+def get_fewshot_examples(task, doc, n, rng):
+    """Return n few-shot examples randomly sampled from the fewshot split."""
+    fewshot_docs = list(task.dataset["fewshot"])
+    # Avoid leaking the test example
+    fewshot_docs = [d for d in fewshot_docs if d != doc]
+    rng.shuffle(fewshot_docs)
+    return fewshot_docs[:n]
+
+# --- The custom sampler ---
+def random_n_0_5(task, doc, num_fewshot, rng):
+    """
+    Randomly sample between 0 and 5 few-shots.
+    num_fewshot in YAML (5) acts as a max cap.
+    """
+    n = rng.randint(0, 5)  # inclusive range [0, 5)
+    return get_fewshot_examples(task, doc, n, rng)
+
+# --- Register sampler manually ---
+from lm_eval.api import samplers
+samplers.SAMPLERS["random_n_0_5"] = random_n_0_5
