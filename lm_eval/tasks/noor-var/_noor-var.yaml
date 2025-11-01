@@ -1,5 +1,5 @@
-group: noor_var
-group_alias: noor_var
+group: noor-var
+group_alias: noor-var
 task:
   - group: stem
     task:
