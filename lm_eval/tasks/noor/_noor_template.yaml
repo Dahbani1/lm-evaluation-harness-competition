@@ -1,4 +1,4 @@
-task: noor
+# task: noor
 dataset_path: mdahba/noor_v1
 output_type: multiple_choice  # or: generate_until, loglikelihood, loglikelihood_rolling
 # training_split: train
