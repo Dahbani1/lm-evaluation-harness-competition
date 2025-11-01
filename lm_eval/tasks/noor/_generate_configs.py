@@ -58,7 +58,7 @@ SUBJECTS = {
     "medical_genetics": "other",
     "miscellaneous": "other",
     "moral_disputes": "humanities",
-    "moral_scenarios": "humanities",
+    # "moral_scenarios": "humanities",
     "nutrition": "other",
     "philosophy": "humanities",
     "prehistory": "humanities",
