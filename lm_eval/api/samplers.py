@@ -233,24 +233,3 @@ def get_sampler(name: str):
         )
 
 
-# --- Helper function ---
-def get_fewshot_examples(task, doc, n, rng):
-    """Return n few-shot examples randomly sampled from the fewshot split."""
-    fewshot_docs = list(task.dataset["fewshot"])
-    # Avoid leaking the test example
-    fewshot_docs = [d for d in fewshot_docs if d != doc]
-    rng.shuffle(fewshot_docs)
-    return fewshot_docs[:n]
-
-# --- The custom sampler ---
-def random_n_0_5(task, doc, num_fewshot, rng):
-    """
-    Randomly sample between 0 and 5 few-shots.
-    num_fewshot in YAML (5) acts as a max cap.
-    """
-    n = rng.randint(0, 5)  # inclusive range [0, 5)
-    return get_fewshot_examples(task, doc, n, rng)
-
-# --- Register sampler manually ---
-from lm_eval.api import samplers
-samplers.SAMPLERS["random_n_0_5"] = random_n_0_5
