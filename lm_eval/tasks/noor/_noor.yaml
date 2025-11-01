@@ -5,6 +5,8 @@ task:
     task:
       - noor_stem
     aggregate_metric_list:
+      - metric: average_confidence_margin
+        weight_by_size: True
       - metric: confidence_margin
         weight_by_size: True
       - metric: acc
@@ -13,6 +15,8 @@ task:
     task:
       - noor_other
     aggregate_metric_list:
+      - metric: average_confidence_margin
+        weight_by_size: True
       - metric: confidence_margin
         weight_by_size: True
       - metric: acc
@@ -21,6 +25,8 @@ task:
     task:
       - noor_social_sciences
     aggregate_metric_list:
+      - metric: average_confidence_margin
+        weight_by_size: True
       - metric: confidence_margin
         weight_by_size: True
       - metric: acc
@@ -29,11 +35,15 @@ task:
     task:
       - noor_humanities
     aggregate_metric_list:
+      - metric: average_confidence_margin
+        weight_by_size: True
       - metric: confidence_margin
         weight_by_size: True
       - metric: acc
         weight_by_size: True
 aggregate_metric_list:
+  - metric: average_confidence_margin
+    weight_by_size: True
   - metric: confidence_margin
     weight_by_size: True
   - metric: acc
