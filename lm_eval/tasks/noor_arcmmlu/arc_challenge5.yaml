@@ -1,0 +1,4 @@
+include: arc_easy5.yaml
+task: arc_challenge
+dataset_name: ARC-Challenge
+

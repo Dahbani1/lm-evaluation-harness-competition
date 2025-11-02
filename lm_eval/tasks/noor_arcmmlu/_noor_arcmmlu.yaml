@@ -1,0 +1,72 @@
+group: noor_arcmmlu
+group_alias: noor_arcmmlu
+task:
+  - group: stem
+    task:
+      - noor_stem
+    aggregate_metric_list:
+      - metric: average_confidence_margin
+        weight_by_size: True
+      - metric: confidence_margin
+        weight_by_size: True
+      - metric: acc
+        weight_by_size: True
+  - group: other
+    task:
+      - noor_other
+    aggregate_metric_list:
+      - metric: average_confidence_margin
+        weight_by_size: True
+      - metric: confidence_margin
+        weight_by_size: True
+      - metric: acc
+        weight_by_size: True
+  - group: social sciences
+    task:
+      - noor_social_sciences
+    aggregate_metric_list:
+      - metric: average_confidence_margin
+        weight_by_size: True
+      - metric: confidence_margin
+        weight_by_size: True
+      - metric: acc
+        weight_by_size: True
+  - group: humanities
+    task:
+      - noor_humanities
+    aggregate_metric_list:
+      - metric: average_confidence_margin
+        weight_by_size: True
+      - metric: confidence_margin
+        weight_by_size: True
+      - metric: acc
+        weight_by_size: True
+  - group: arc_challenge
+    task:
+      - arc_challenge
+    aggregate_metric_list:
+      - metric: average_confidence_margin
+        weight_by_size: True
+      - metric: confidence_margin
+        weight_by_size: True
+      - metric: acc
+        weight_by_size: True
+  - group: arc_easy
+    task:
+      - arc_easy
+    aggregate_metric_list:
+      - metric: average_confidence_margin
+        weight_by_size: True
+      - metric: confidence_margin
+        weight_by_size: True
+      - metric: acc
+        weight_by_size: True
+aggregate_metric_list:
+  - metric: average_confidence_margin
+    weight_by_size: True
+  - metric: confidence_margin
+    weight_by_size: True
+  - metric: acc
+    weight_by_size: True
+metadata:
+  version: 2
