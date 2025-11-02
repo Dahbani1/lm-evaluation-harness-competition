@@ -41,7 +41,7 @@ task:
         weight_by_size: True
       - metric: acc
         weight_by_size: True
-  - group: arc_challenge
+  - group: noor_arc_challenge
     task:
       - arc_challenge
     aggregate_metric_list:
@@ -51,7 +51,7 @@ task:
         weight_by_size: True
       - metric: acc
         weight_by_size: True
-  - group: arc_easy
+  - group: noor_arc_easy
     task:
       - arc_easy
     aggregate_metric_list:
