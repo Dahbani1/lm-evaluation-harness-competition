@@ -1,8 +1,10 @@
 tag:
   - ai2_arc
-task: arc_easy
+task: arc_easy3
+"tag": "noor_arc_easy_tasks"
 dataset_path: allenai/ai2_arc
 dataset_name: ARC-Easy
+"description": "The following are multiple choice questions (with answers)\n\n"
 output_type: multiple_choice
 training_split: train
 validation_split: validation
@@ -19,6 +21,12 @@ metric_list:
     aggregation: mean
     higher_is_better: true
   - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
+  - metric: confidence_margin
+    aggregation: mean
+    higher_is_better: true
+  - metric: average_confidence_margin
     aggregation: mean
     higher_is_better: true
 metadata:
