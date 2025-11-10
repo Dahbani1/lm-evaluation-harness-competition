@@ -1,7 +1,6 @@
 tag:
   - ai2_arc
-task: arc_easy1
-"tag": "noor_arc_easy_tasks"
+task: arc_easy
 dataset_path: allenai/ai2_arc
 dataset_name: ARC-Easy
 "description": "The following are multiple choice questions (with answers)\n\n"
@@ -15,7 +14,7 @@ doc_to_target: "{{choices.label.index(answerKey)}}"
 doc_to_choice: "{{choices.text}}"
 should_decontaminate: true
 doc_to_decontamination_query: "Question: {{question}}\nAnswer:"
-num_fewshot: 1
+num_fewshot: 5
 metric_list:
   - metric: acc
     aggregation: mean

@@ -1,4 +1,4 @@
 include: arc_easy5.yaml
-task: arc_challenge
+task: arc_challenge5
 dataset_name: ARC-Challenge
-
+"tag": "noor_arc_challenge_tasks"
