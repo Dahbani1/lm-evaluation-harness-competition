@@ -1,7 +1,0 @@
-"dataset_name": "astronomy"
-"description": "The following are multiple choice questions (with answers) about astronomy.\n\
-  \n"
-"include": "_noor_template1.yaml"
-"tag": "noor_stem_tasks"
-"task": "noor_astronomy1"
-"task_alias": "astronomy"
