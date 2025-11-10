@@ -1,5 +1,5 @@
 # task: noor
-dataset_path: mdahba/noor_v3
+dataset_path: mdahba/noor_final2
 output_type: multiple_choice  # or: generate_until, loglikelihood, loglikelihood_rolling
 # training_split: train
 validation_split: validation
@@ -11,7 +11,6 @@ fewshot_config:
 doc_to_text: "Question: {{question.strip()}}\nAnswer:"
 doc_to_choice: "{{choices}}"
 doc_to_target: "{{answer}}"
-process_results: !function custom_metrics_and_processing.process_results_with_all_margins
 metric_list:
   - metric: acc
     aggregation: mean
@@ -19,9 +18,4 @@ metric_list:
   - metric: acc_norm
     aggregation: mean
     higher_is_better: true
-  - metric: confidence_margin
-    aggregation: mean
-    higher_is_better: true
-  - metric: average_confidence_margin
-    aggregation: mean
-    higher_is_better: true
+
