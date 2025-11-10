@@ -7,6 +7,24 @@ task:
     aggregate_metric_list:
       - metric: acc
         weight_by_size: True
+  - group: other
+    task:
+      - noor_other
+    aggregate_metric_list:
+      - metric: acc
+        weight_by_size: True
+  - group: social sciences
+    task:
+      - noor_social_sciences
+    aggregate_metric_list:
+      - metric: acc
+        weight_by_size: True
+  - group: humanities
+    task:
+      - noor_humanities
+    aggregate_metric_list:
+      - metric: acc
+        weight_by_size: True
   - group: noor_arc_challenge
     task:
       - arc_challenge
