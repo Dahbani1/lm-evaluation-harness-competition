@@ -7,6 +7,18 @@ task:
     aggregate_metric_list:
       - metric: acc
         weight_by_size: True
+  - group: other
+    task:
+      - noor_other
+    aggregate_metric_list:
+      - metric: acc
+        weight_by_size: True
+  - group: humanities
+    task:
+      - noor_humanities
+    aggregate_metric_list:
+      - metric: acc
+        weight_by_size: True
 aggregate_metric_list:
   - metric: acc
     weight_by_size: True
