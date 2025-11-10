@@ -1,4 +1,0 @@
-include: arc_easy3.yaml
-task: arc_challenge3
-dataset_name: ARC-Challenge
-"tag": "noor_arc_challenge_tasks"
