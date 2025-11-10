@@ -1,5 +1,5 @@
 # task: noor
-dataset_path: mdahba/noor_final1
+dataset_path: mdahba/noor_final2
 output_type: multiple_choice  # or: generate_until, loglikelihood, loglikelihood_rolling
 # training_split: train
 validation_split: validation

@@ -1,5 +1,5 @@
-group: noor
-group_alias: noor
+group: noor_arcmmlu
+group_alias: noor_arcmmlu
 task:
   - group: stem
     task:
@@ -7,15 +7,15 @@ task:
     aggregate_metric_list:
       - metric: acc
         weight_by_size: True
-  - group: other
+  - group: noor_arc_challenge
     task:
-      - noor_other
+      - arc_challenge
     aggregate_metric_list:
       - metric: acc
         weight_by_size: True
-  - group: humanities
+  - group: noor_arc_easy
     task:
-      - noor_humanities
+      - arc_easy
     aggregate_metric_list:
       - metric: acc
         weight_by_size: True

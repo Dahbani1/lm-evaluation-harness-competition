@@ -1,7 +1,7 @@
-group: noor_humanities
-group_alias: humanities
+group: arc_challenge
+group_alias: noor_arc_challenge
 task:
-  - noor_humanities_tasks
+  - noor_arc_challenge_tasks
 aggregate_metric_list:
   - metric: acc
     weight_by_size: True

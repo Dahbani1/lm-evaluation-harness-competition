@@ -1,7 +1,7 @@
-group: noor_other
-group_alias: other
+group: arc_easy
+group_alias: noor_arc_easy
 task:
-  - noor_other_tasks
+  - noor_arc_easy_tasks
 aggregate_metric_list:
   - metric: acc
     weight_by_size: True
